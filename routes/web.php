@@ -35,3 +35,5 @@ Route::group(['prefix'=>'users','middleware'=>'auth','namespace'=>'Testc'],funct
 Auth::routes(['verify'=>'true']);
 
 Route::GET('/home', 'HomeController@index')->name('home');
+Route::GET('/redirect/{service}', 'SocialController@redirect');
+Route::GET('/callback/{service}', 'SocialController@callback');
